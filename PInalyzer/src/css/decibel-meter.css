@@ -1,0 +1,36 @@
+.decibel-indicator {
+    width: 95%;
+    height: 30%;
+    border: 5px solid #000;
+    border-radius: 44px;
+}
+
+.decibel-meter {
+    height: 80%;
+    background-color: #008000;
+    border-radius: 44px;
+    padding: 5px;
+    margin: 5px;
+    width: 50%;
+}
+
+.interval {
+    border-left: 1px solid #000;
+    height: 100%;
+    margin-left: 20px;
+}
+
+.label-min, .label-max{
+    font-weight: bold;
+    display: inline-block;
+}
+
+.label-max {
+    float: right;
+}
+
+.decibel-display {
+    font-size: xx-large;
+    font-weight: bold;
+    text-align: center;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PInalyzer</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./js/fileReader.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/thermometer.css">
+    <link rel="stylesheet" type="text/css" href="css/decibel-meter.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body onload="readTextFile()">
+<div class="section-top">
+    <h1 class="title">PInalyzer - Dashboard</h1>
+    <img class="logo" src="../assets/raspberry_pi_logo.png" width="60px"/>
+</div>
+<div class="dashboard">
+    <div class="container">
+        <h2>Thermometer</h2>
+        <div class="thermometer">
+            <div class="thermometer-bulb"></div>
+            <p id="degree_max" style="top: 0;position: absolute;">40&deg;C</p>
+            <p id="degree_min" style="bottom: 0;position: absolute;">-10&deg;C</p>
+            <div id="thermometer-indicator"></div>
+        </div>
+        <p id="degree-display"></p>
+    </div>
+
+    <div class="container">
+        <h2>Decibel meter</h2>
+        <div class="decibel-indicator">
+            <div class="decibel-meter"></div>
+            <p class="label-min">0dB</p>
+            <p class="label-max">70dB</p>
+            <p class="decibel-display">50dB</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
