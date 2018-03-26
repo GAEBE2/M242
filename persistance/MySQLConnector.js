@@ -42,4 +42,9 @@ export default class MySQLConnector {
         const query = 'SELECT * FROM temperature ORDER BY DAT DESC LIMIT 1';
         return this.runQuery(query, null);
     }
+
+    public getDezibel() {
+        const query = 'SELECT * FROM dezibel ORDER BY DAT DESC LIMIT 1';
+        return this.runQuery(query, null);
+    }
 }
