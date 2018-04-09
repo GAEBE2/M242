@@ -1,12 +1,14 @@
-const express = require('express')();
-import MySQLConnector from '../persistance/MySQLConnector';
+const app = require('express')();
+const MySQLConnector = require('../persistance/MySQLConnector');
 
-const mysql = new MySQLConnector('root', '', 'modul242', 'localhost');
+const mysql = new MySQLConnector('root', 'm242', 'modul242', 'localhost');
 
-express.post('/temp', (req, res) => {
+app.post('/temp', (req, res) => {
     res.send(mysql.getTempretatures());
 });
 
-express.post('/dezibel', (req, res) => {
+app.post('/dezibel', (req, res) => {
     res.send(mysql.getDezibel());
 });
+
+app.listen(process.env.PORT || 3000);
