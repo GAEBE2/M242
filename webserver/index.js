@@ -1,7 +1,7 @@
 const app = require('express')();
 const MySQLConnector = require('../persistance/MySQLConnector');
 
-const mysql = new MySQLConnector('root', 'm242', 'modul242', 'localhost');
+const mysql = new MySQLConnector('root', 'm242', 'localhost', 'modul242');
 
 app.post('/temp', (req, res) => {
     const results = mysql.getTempretatures();
