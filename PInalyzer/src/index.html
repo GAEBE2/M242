@@ -5,12 +5,12 @@
     <title>PInalyzer</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="./js/fileReader.js"></script>
+    <script src="./js/requestData.js"></script>
     <link rel="stylesheet" type="text/css" href="css/thermometer.css">
     <link rel="stylesheet" type="text/css" href="css/decibel-meter.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body onload="readTextFile()">
+<body>
 <div class="section-top">
     <h1 class="title">PInalyzer - Dashboard</h1>
     <img class="logo" src="../assets/raspberry_pi_logo.png" width="60px"/>
@@ -36,6 +36,18 @@
             <p id="decibel-display">50dB</p>
         </div>
     </div>
+
 </div>
+<script>
+    import {requestDezibel, requestButton, requestLight, requestTemp} from "./js/requestData";
+    $(document).ready(() => {
+        while(true) {
+            requestTemp(console.log);
+            requestLight(console.log);
+            requestDezibel(console.log);
+            requestButton(console.log);
+        }
+    });
+</script>
 </body>
 </html>

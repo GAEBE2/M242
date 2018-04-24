@@ -41,6 +41,16 @@ class MySQLConnector {
         const query = 'SELECT * FROM measurement_volume ORDER BY Time DESC LIMIT 1';
         return this.runQuery(query, null);
     }
+
+    getLight() {
+        const query = 'SELECT * FROM measurement_light ORDER BY Time DESC LIMIT 1';
+        return this.runQuery(query, null);
+    }
+
+    getButton() {
+        const query = 'SELECT * FROM measurement_button ORDER BY Time DESC LIMIT 1';
+        return this.runQuery(query, null);
+    }
 }
 
 module.exports = MySQLConnector;
